@@ -6,3 +6,9 @@
   max-width: 400px;
   margin: 0 auto;
 }
+
+ul > li {
+  list-style-type: none;
+  padding: 5px;
+  margin: 2px;
+}

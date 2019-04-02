@@ -7,7 +7,8 @@ const callDogs = (function() {
         `https://dog.ceo/api/breeds/image/random/${$('#random-dogs').val()}`
       )
         .then(response => response.json())
-        .then(jsonResponse => console.log(jsonResponse.message));
+        .then(jsonResponse => store.setImagesArray(jsonResponse.message))
+        .then(response => renderFunction.renderImages());
     });
   }
 
