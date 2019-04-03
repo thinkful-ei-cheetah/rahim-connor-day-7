@@ -1,3 +1,6 @@
+'use strict';
+/* global $ */
+
 const store = (function() {
   let dogs = null;
   let images = [];
@@ -8,6 +11,10 @@ const store = (function() {
 
   function getNumDogs() {
     return dogs;
+  }
+
+  function clearImageArray() {
+    images.length = 0;
   }
 
   function setImagesArray(imageArray) {
@@ -24,6 +31,7 @@ const store = (function() {
     setDogs,
     getNumDogs,
     setImagesArray,
-    getImagesArray
+    getImagesArray,
+    clearImageArray
   };
 })();
